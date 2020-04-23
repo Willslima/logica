@@ -1,21 +1,11 @@
-var maca = require('readline-sync')
-var compra = maca.question('Digite a quantidade de macas compradas ')
-var varejo = 0.30
-var atacado = 0.25
+var user = require('readline-sync')
+var fruta = user.question('Digite a quantidade de macas compradas ')
 
-
-
-function calculo(compra,varejo,atacado){
-    if(compra <= 12) {
-        return compra * varejo;
-
-    } else if (compra > 13) {
-        compra * atacado
-    } else {
-        console.log('Não foi possivel calcular')
-    }
+if (fruta <=12){
+    fruta = fruta*0.30
+    console.log('Voce gastou: R$' + fruta.toFixed(2))
+} else {
+    fruta = fruta*0.25
+    console.log('Voce gastou: R$' + fruta.toFixed(2))
 }
 
-console.log('Voce comprou '+ compra + ' macas e gastou um total de R$' + calculo(compra,varejo,atacado))
-
-//bug no resultado em atacado

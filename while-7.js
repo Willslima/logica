@@ -10,16 +10,19 @@
 
 
 var rs = require('readline-sync')
-var exit = rs.question('Digite A ou B \n A para sair \n B para realizar um calculo')
-var calculo;
+var questao = rs.question('Digite A ou B \n A para sair \n B para realizar um calculo ')
 
-while(exit !== 'a' || !== 'b'){
-    console.log('digite uma opção valia')   
-    }
-}console.log('Encerrando programa')
+while (questao == 'b' || questao == 'B') {
+    var n1 = rs.questionInt('Digite um número ')
+    var n2 = rs.questionInt('Digite outro número ')
+    var resultado = 0
+    resultado = n1 + n2
+    console.log('O resultado da sua conta é: ' + resultado)
+    var opCa = rs.question('Digite C para realizar outro calculo ou A para sair ')
+    if (opCa == 'c' || opCa == 'C') { }
+    else if (opCa == 'A' || opCa == 'a') {
+        break
+    } else if (questao != 'b' && questao != 'B' && opCa != 'a' && opCa != 'A' && opCa != 'c' && opCa != 'C') { console.log('Comando não entendido ! Digite A ou B \n A para sair \n B para realizar um calculo ') }
+}
 
-// while(calculo == 'B') {
-//     var n1 = rs.questionInt('Digite um número')
-//     var n2 = rs.questionInt('Digite um número')
-//     calculo = n1 + n2
-// console.log('O resultado do seu cálculo é ' +calculo)
+

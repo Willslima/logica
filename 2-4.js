@@ -15,6 +15,11 @@ var prest = user.question('Digite em quantas prestações deseja realizar o paga
 var porcentagemPermitida = salario / 100
 var trintaP = porcentagemPermitida * 30
 
-console.log(trintaP)
-
-// Continuar a lógica 
+if (salario <= 0 || emprestimo <= 0 || prest <= 0){
+    console.log('Informações invalida, nenhum dos números digitados pode ser (0) zero. ')
+}
+ else if(emprestimo <= trintaP){
+    console.log('Voce vai pagar o valor de R$' + (emprestimo/prest) + ' em ' + prest + ' vezes.')
+} else if ( emprestimo > trintaP){
+    console.log('Infelizmente o emprestimo não pode ser concedido. \n Valor solicitado maior que o limite. ')
+}

@@ -8,3 +8,25 @@
 // Entre com o grau B: 6.0
 // O aluno João da Silva tem uma média:5.7
 
+var rs = require('readline-sync')
+
+
+//Nota A 30%
+//Nota B 70%
+
+//Nome do aluno + nota 
+
+var n1 = 3, n2 = 7, cont = 1
+
+
+for(var media = 0; cont <= 5; cont ++ ){
+    let n1 = rs.questionInt('Digite a primeira nota ')
+    let n2 = rs.questionInt('Digite a segunda nota ')
+    let nomeAluno = rs.question('Digite o nome e sobrenome do Aluno ')
+
+        media = (n1*3)+(n2*7)
+        media = media/10
+
+            console.log('O aluno ', nomeAluno + ' tem uma média: ',media)
+    }
+    

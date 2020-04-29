@@ -22,12 +22,12 @@ var option = ''
 
 option = rs.question('Digite uma palavra: ')
 
+var palavra = option.split('')
 for (let i=0; i < option.length; i++){
     if(option.charAt(i)=== 'a'){
-        var palavra = option.split('')
         palavra[i] = option.charAt(i).toUpperCase()
 
-        console.log(palavra.join(''))
     }
 }
 
+console.log(palavra.join(''))

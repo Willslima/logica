@@ -6,3 +6,22 @@
 // N x N = N2
 // Após isso solicite o usuário um número e forneça o argumento do usuário para a
 // função.
+
+
+
+var rs = require('readline-sync')
+var num = rs.questionInt('Digite um número: ')
+var tab = 1
+
+function cacl () {
+    for (tab = 1;tab <= 10; tab++) {
+       var CalcTab = tab * num
+        console.log(`${tab} x ${num} = ${CalcTab}`)
+        
+
+
+    }
+}
+
+cacl()
+

@@ -46,3 +46,4 @@ console.log(numIguais)
 console.log(nomeJogadorA + ' ' + jA)
 console.log(nomeJogadorB + ' ' + jB)
 
+//INCOMPLETO

@@ -3,3 +3,21 @@
 // Solicite ao usuário o número e no final imprima se é primo ou não utilizando a função na
 // condição IF.
 
+var user = require('readline-sync')
+var num = user.questionInt("Insira um numero: ")
+
+function teste (num) {
+var i = 2
+var x = 0
+    while(i<num){
+        if(num%i == 0){
+        x++    
+    }
+    if(x>0){
+        return "nao é primo"
+    }
+    i++; 
+    }
+        return "é primo"
+}
+console.log(`o numero inserido ${teste(num)}`)

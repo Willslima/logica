@@ -13,6 +13,8 @@ var nomeJogadorA = rs.question('Digite o nome dos jogadores: ')
 var nomeJogadorB = rs.question('Digite o nome do segundo jogador: ')
 var jA = []
 var jB = []
+var numiguais = []
+
 for (var cont = 0; cont < 5; cont++) {
     var numeros = rs.questionInt('Digite um numero de 1 à 10: ')
     if (numeros < 10) {
@@ -32,18 +34,17 @@ for (var cont = 0; cont < 5; cont++) {
 }
 
 
-// var numIguais = []
-// for (var cont = 0; cont < 5; cont++) {
-//     for (var contB; contB < 5; contB++) {
-//         if (jA[contB]==jB[cont]) {
-//             numIguais.push(jA[contB])
+for(var i=0;i<jA.length;i++){
+    for(var x =0;x<jB.length;x++){
+        if(jA[i]==jB[x]){
+            numiguais.push(jA[i])
+        }
+    }
 
-//         }
-//     }
-// }
+}
 
-console.log(numIguais)
+
+console.log(numiguais)
 console.log(nomeJogadorA + ' ' + jA)
 console.log(nomeJogadorB + ' ' + jB)
 
-//INCOMPLETO

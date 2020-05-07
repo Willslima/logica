@@ -5,3 +5,22 @@
 // igual a ele mesmo
 // Exemplo 6 possui os seguintes divisores
 // 1 + 2 + 3 = 6
+
+var user = require('readline-sync')
+
+function num_perfeito(num) {
+    var soma = 0
+    for(var x =1;x<num;x++){
+    if(num%x==0){
+        soma = soma + x
+    }
+}
+    if(soma == num){
+        return "e perfeito"
+    }else{
+        return "nao e perfeito"
+    }
+}
+
+var num = user.questionInt("Insira um numero para saber se ele e perfeito: ")
+console.log(`O numero inserido ${num_perfeito(num)}`)

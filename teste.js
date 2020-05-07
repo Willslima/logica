@@ -1,27 +1,29 @@
+/*
 
-// function fazerCafe(){
-//     console.log('Ferver a água');
-//     console.log('Moer café');
-//     console.log('Por pó no filtro');
-//     console.log('Colocar o coador no bule');
-//     console.log('Por a água no filtro');
-//     console.log('Esperar filtrar');
-//     console.log('Servir o café');
-// }
+Array = estrutura de dados
+Array é ordenado sequencialmente
 
-// fazerCafe();
+Objeto não
 
-// function funcaoEstranha(x,y){
-//     return x
-// }
-// console.log(funcaoEstranha(5,10))
+typeof = mostra o tipo de dado que a variável represeta
 
-function ehPar(x){
-    return x % 2 !== 0
-}
-var numero = ehPar(6)
-if(numero){
-    console.log('Eh par')
-} else{
-    console.log('Não é par')
-}
+*/
+
+var x = []
+
+var y = Array ()
+
+
+console.log(x)
+console.log(y)
+
+var Objeto = new Object()
+Objeto.cor = 'transparente'
+Objeto.tamanho = 'Grande'
+Objeto.dono = 'Eu'
+
+console.log(Objeto)
+
+var json = '{"xicara":0.765}'
+var xicara = JSON.parse(json)
+console.log(xicara.xicara)

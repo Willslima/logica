@@ -3,3 +3,10 @@
 // Após isso imprima os valores lidos do json do arquivo.
 // OBS: altere o arquivo salve e rode o programa novamente e veja os dados sendo
 // mudados a cada execução.
+
+var fs = require('fs')
+var jsonSerializado = fs.readFileSync('objetos/carros.json')
+var carro = JSON.parse(jsonSerializado)
+console.log(`Marca: ${carro.marca}, Modelo: ${carro.modelo}, Cor: ${carro.cor}` )
+
+

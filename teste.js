@@ -1,29 +1,22 @@
-/*
-
-Array = estrutura de dados
-Array é ordenado sequencialmente
-
-Objeto não
-
-typeof = mostra o tipo de dado que a variável represeta
-
-*/
-
-var x = []
-
-var y = Array ()
+class pessoa {
+    constructor(nome, sobrenome, cor) {
+        this.nome = nome
+        this.sobrenome = sobrenome
+        this.cor = cor
+    }
 
 
-console.log(x)
-console.log(y)
+    fazendo() {
+        console.log(`${this.nome} andou bastante hoje`)
+    }
 
-var Objeto = new Object()
-Objeto.cor = 'transparente'
-Objeto.tamanho = 'Grande'
-Objeto.dono = 'Eu'
+    comendo() {
+        console.log(`Agora ${this.nome} está comendo`)
+    }
+}
 
-console.log(Objeto)
+var eu = new pessoa('Willian', 'Santos', 'Branco')
 
-var json = '{"xicara":0.765}'
-var xicara = JSON.parse(json)
-console.log(xicara.xicara)
+console.log(eu)
+eu.fazendo()
+eu.comendo()

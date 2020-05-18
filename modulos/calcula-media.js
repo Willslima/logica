@@ -20,20 +20,8 @@ function calculaMedia(){
 }
 calculaMedia()
 
-function x () { return console.log('Teste: eu sou outra função')}
-x()
+/*********************************************/
 
-/* Crie um algoritmo que cadastre 3 alunos e diga qual possui a maior idade, se mais de
-um possuir maior idade apresentar o nome de todos os que possuem maior idade.
-Para isso crie uma classe Aluno que receba duas variáveis no construtor nome e idade
-e inicialize essas variáveis nas propriedades do objeto.
-Após isso peça para o usuário cadastrar o primeiro aluno e solicite nome e idade.
-Crie o objeto do aluno e adicione em um array.
-Repita esse passo para os outros alunos.
-Ao final o algoritmo deve iterar pelo array de alunos e descobrir quais são os alunos
-com maior idade e imprimir seus nomes */
-
-var rs = require('readline-sync');
 var maiorIdade = []
 class Aluno {
     constructor(nome, idade) {
@@ -45,41 +33,33 @@ function cadastrarAluno() {
     var primeiroAluno = new Aluno(
         this.nome = rs.question('Insira o nome do aluno'),
         this.idade = rs.question('Insira a idade do aluno'),
-    )
-    return primeiroAluno;
-}
-for (var i = 0; i < 3; i++) {
-    maiorIdade.push(cadastrarAluno())
-}
-console.log(maiorIdade)
-/*método trabalhoso, manual 
- if (maiorIdade[0].idade >= maiorIdade[1].idade && maiorIdade[0].idade >= maiorIdade[2].idade) {
-     console.log('a maior idade e ', maiorIdade[0])
- } 
- if (maiorIdade[1].idade >= maiorIdade[2].idade && maiorIdade[1].idade >= maiorIdade[0].idade) {
-    console.log('a maior idade e ', maiorIdade[1])
- } 
- if (maiorIdade[2].idade >= maiorIdade[0].idade && maiorIdade[2].idade >= maiorIdade[1].idade) {
-    console.log('a maior idade e ', maiorIdade[2])
- }
- */
-var maiorIdadeEntreTodos = 0
-for (var i = 0; i < maiorIdade.length; i++) {
-    var idadeAtual = maiorIdade[i].idade
-    if (idadeAtual > maiorIdadeEntreTodos) {
-        maiorIdadeEntreTodos = idadeAtual
+        )
+        return primeiroAluno;
     }
-}
-console.log(maiorIdadeEntreTodos)
-for (var i = 0; i < maiorIdade.length; i++){
-    if (maiorIdadeEntreTodos == maiorIdade[i].idade){
-        console.log("o aluno de maior idade é", maiorIdade[i])
+    for (var i = 0; i < 3; i++) {
+        maiorIdade.push(cadastrarAluno())
     }
-}
-
-
-
-
-
-
-exports = {calculaMedia, x}
+    console.log(maiorIdade)
+    
+    var maiorIdadeEntreTodos = 0
+    for (var i = 0; i < maiorIdade.length; i++) {
+        var idadeAtual = maiorIdade[i].idade
+        if (idadeAtual > maiorIdadeEntreTodos) {
+            maiorIdadeEntreTodos = idadeAtual
+        }
+    }
+    console.log(maiorIdadeEntreTodos)
+    for (var i = 0; i < maiorIdade.length; i++){
+        if (maiorIdadeEntreTodos == maiorIdade[i].idade){
+            console.log("o aluno de maior idade é", maiorIdade[i])
+        }
+    }
+    
+    
+    
+    
+    function x () { return console.log('Teste: eu sou outra função')}
+    x()
+    
+    
+    exports = {calculaMedia, x}

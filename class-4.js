@@ -11,28 +11,30 @@
 
 // Adicione no final do programa da atividade 2 após informar o nome dos alunos com
 // maior idade também imprimir a média de idade dos alunos utilizando o método
-// calculaMediaIdadeAluno(alunos)var rs = require('readline-sync')
+// calculaMediaIdadeAluno(alunos)
 
-let rs = require('readline-sync')
+var rs = require('readline-sync');
 
-let Alunos = []
-let Idade = []
+var MediaIdade = []
+var cont = rs.questionInt('Quantos alunos deseja cadastrar? ')
 
-let nome = rs.question('Digite o nome do aluno: ')
-let idade = rs.questionInt('Digite a idade do aluno: ')
-
-class TodosAlunos {
-    constructor(nome, idade){
-        this.nome = nome
-        this.idade = idade
+class Aluno {
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
     }
 }
+function cadastrarAluno() {
 
-let PrimeiroAluno = new TodosAlunos (nome,idade)
+    var primeiroAluno = new Aluno(
+        this.nome = rs.question('Insira o nome do aluno: '),
+        this.idade = rs.question('Insira a idade do aluno: '),
+    )
+    return primeiroAluno;
+}
 
-Alunos.push(PrimeiroAluno.nome)
-Idade.push(PrimeiroAluno.idade)
+for (var i = 0; i < cont; i++) {
+    MediaIdade.push(cadastrarAluno())
+}
 
-console.log(PrimeiroAluno)
-
-console.log(Alunos,Idade)
+console.log(MediaIdade)

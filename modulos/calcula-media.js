@@ -25,5 +25,25 @@ calculaMedia()
     // function x () { return console.log('Teste: eu sou outra função')}
     // x()
     
+    var Alunos = []
+    var cont = rs.questionInt('Quantos Alunos deseja cadastrar? ')
+
+    function cadastraAluno(){
+    class Aluno{
+        constructor(nome, idade){
+            this.nome = nome
+            this.idade = idade
+        }
+    }
     
+    function PrimeiroAluno(){
+        var Aluno1 = new Aluno(
+            this.nome = rs.question('Insira o nome do Aluno: ')
+            this.idade = rs.questionInt('Insira a idade do aluno: ')
+        )
+
+        return PrimeiroAluno
+    }
+    
+}
     exports = {calculaMedia}

@@ -13,28 +13,6 @@
 // maior idade também imprimir a média de idade dos alunos utilizando o método
 // calculaMediaIdadeAluno(alunos)
 
-var rs = require('readline-sync');
+var pa = require('./modulos/calcula-media')
 
-var MediaIdade = []
-var cont = rs.questionInt('Quantos alunos deseja cadastrar? ')
-
-class Aluno {
-    constructor(nome, idade) {
-        this.nome = nome;
-        this.idade = idade;
-    }
-}
-function cadastrarAluno() {
-
-    var primeiroAluno = new Aluno(
-        this.nome = rs.question('Insira o nome do aluno: '),
-        this.idade = rs.question('Insira a idade do aluno: '),
-    )
-    return primeiroAluno;
-}
-
-for (var i = 0; i < cont; i++) {
-    MediaIdade.push(cadastrarAluno())
-}
-
-console.log(MediaIdade)
+pa.PrimeiroAluno

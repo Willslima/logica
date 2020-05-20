@@ -15,9 +15,10 @@ function calculaMedia(){
     mediaDeTodos = mediaDeTodos + (media[1]/media.length)
     mediaDeTodos = mediaDeTodos + (media[2]/media.length)
 
-    console.log(mediaDeTodos)
+    console.log(`A média é: ${mediaDeTodos}`)
     return calculaMedia
 }
+
 calculaMedia()
 
 /*********************************************/
@@ -28,22 +29,31 @@ calculaMedia()
     var Alunos = []
     var cont = rs.questionInt('Quantos Alunos deseja cadastrar? ')
 
-    function cadastraAluno(){
+
     class Aluno{
         constructor(nome, idade){
             this.nome = nome
             this.idade = idade
         }
     }
+
     
     function PrimeiroAluno(){
         var Aluno1 = new Aluno(
-            this.nome = rs.question('Insira o nome do Aluno: ')
-            this.idade = rs.questionInt('Insira a idade do aluno: ')
-        )
+            this.nome = rs.question('Insira o nome do Aluno: '),
+            this.idade = rs.questionInt('Insira a idade do aluno: '),
+            )
 
-        return PrimeiroAluno
+        return Aluno1
     }
-    
+
+for (var i = 0; i < cont; i++){
+Alunos.push(PrimeiroAluno())
 }
-    exports = {calculaMedia}
+
+console.log(Alunos)
+
+
+exports.calculaMedia = calculaMedia
+exports.PrimeiroAluno = PrimeiroAluno
+    // exports = {calculaMedia, PrimeiroAluno}

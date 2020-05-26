@@ -10,14 +10,14 @@ var user = require('readline-sync')
 
 function num_perfeito(num) {
     var soma = 0
-    for(var x =1;x<num;x++){
-    if(num%x==0){
-        soma = soma + x
+    for (var x = 1; x < num; x++) {
+        if (num % x == 0) {
+            soma = soma + x
+        }
     }
-}
-    if(soma == num){
+    if (soma == num) {
         return "e perfeito"
-    }else{
+    } else {
         return "nao e perfeito"
     }
 }

@@ -1,59 +1,56 @@
 var rs = require('readline-sync')
 
-var media = []
 
-function calculaMedia(){
+function calculaMedia() {
+    var media = []
 
-    for(var i = 0; i < 3; i++){
+    for (var i = 0; i < 3; i++) {
         var m = []
         m = rs.questionInt('Digite um número: ')
         media.push(m)
     }
 
     var mediaDeTodos = 0
-    mediaDeTodos = mediaDeTodos + (media[0]/media.length)
-    mediaDeTodos = mediaDeTodos + (media[1]/media.length)
-    mediaDeTodos = mediaDeTodos + (media[2]/media.length)
+    mediaDeTodos = mediaDeTodos + (media[0] / media.length)
+    mediaDeTodos = mediaDeTodos + (media[1] / media.length)
+    mediaDeTodos = mediaDeTodos + (media[2] / media.length)
 
     console.log(`A média é: ${mediaDeTodos}`)
     return calculaMedia
 }
 
-calculaMedia()
+
 
 /*********************************************/
 
-    // function x () { return console.log('Teste: eu sou outra função')}
-    // x()
-    
+class Aluno {
+    constructor(nome, idade) {
+        this.nome = nome
+        this.idade = idade
+    }
+}
+
+function cadastraAluno() {
     var Alunos = []
     var cont = rs.questionInt('Quantos Alunos deseja cadastrar? ')
 
-
-    class Aluno{
-        constructor(nome, idade){
-            this.nome = nome
-            this.idade = idade
-        }
+    for (var i = 0; i < cont; i++) {
+        Alunos.push(PrimeiroAluno())
     }
-
-    
-    function PrimeiroAluno(){
-        var Aluno1 = new Aluno(
-            this.nome = rs.question('Insira o nome do Aluno: '),
-            this.idade = rs.questionInt('Insira a idade do aluno: '),
-            )
-
-        return Aluno1
-    }
-
-for (var i = 0; i < cont; i++){
-Alunos.push(PrimeiroAluno())
+    return Alunos
 }
 
-console.log(Alunos)
 
+function PrimeiroAluno() {
+    var Aluno1 = new Aluno(
+        this.nome = rs.question('Insira o nome do Aluno: '),
+        this.idade = rs.questionInt('Insira a idade do aluno: '),
+    )
+
+    return Aluno1
+}
 
 exports.calculaMedia = calculaMedia
+exports.cadastraAluno = cadastraAluno
 exports.PrimeiroAluno = PrimeiroAluno
-    // exports = {calculaMedia, PrimeiroAluno}
+    

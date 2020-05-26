@@ -14,7 +14,7 @@ var num = rs.questionInt('Digite um número: ')
 var tab = 1
 
 function cacl () {
-    for (tab = 1;tab <= 10; tab++) {
+    for (tab = 1;tab <= num; tab++) {
        var CalcTab = tab * num
         console.log(`${tab} x ${num} = ${CalcTab}`)
         

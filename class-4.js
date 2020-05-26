@@ -13,6 +13,16 @@
 // maior idade também imprimir a média de idade dos alunos utilizando o método
 // calculaMediaIdadeAluno(alunos)
 
-var pa = require('./modulos/calcula-media')
+var MediaIdade = require('./modulos/calcula-media')
 
-pa.PrimeiroAluno
+var idade = []
+ idade = MediaIdade.cadastraAluno()
+
+var media = 0
+
+
+ for(var i = 0; i < idade.length; i ++){
+    media += idade[i].idade
+ }
+
+console.log(media)

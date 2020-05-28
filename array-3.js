@@ -1,12 +1,12 @@
-// (LEFT JOIN) Faça um algoritmo que receba o nome de dois jogadores e após isso peça
-// 5 números de 1 a 10 para cada jogador. Primeiro para o jogador A e depois para o
-// jogador B.
-// Após a escolha de cada jogador o algoritmo deve apresentar quais foram os números
-// que apenas o jogador A colocou diferente do B.
-// EX: Jogador A : 1, 2, 3, 4, 5
-// Jogador B : 1,2,3,8,7
-// Algoritmo imprime :
-// 4,5
+// // (LEFT JOIN) Faça um algoritmo que receba o nome de dois jogadores e após isso peça
+// // 5 números de 1 a 10 para cada jogador. Primeiro para o jogador A e depois para o
+// // jogador B.
+// // Após a escolha de cada jogador o algoritmo deve apresentar quais foram os números
+// // que apenas o jogador A colocou diferente do B.
+// // EX: Jogador A : 1, 2, 3, 4, 5
+// // Jogador B : 1,2,3,8,7
+// // Algoritmo imprime :
+// // 4,5
 
 var rs = require('readline-sync')
 var j1 = rs.question('Digite o nome do jogador 1: ')
@@ -27,7 +27,11 @@ console.log('Os números do(a)', j1, ' são: ', guardaN1, 'Os números do(a)', j
 var numDiferentes = []
 
 for (var i = 0; i < guardaN1.length; i++) {
-    //if (guardaN2.includes(guardaN1[i]) == false) { ... }
+    if (guardaN2.includes(guardaN1[i]) == false) { 
+        numDiferentes.push(guardaN1[i])
+     }
 }
 
-console.log(numDiferentes)
+console.log(`Os números diferentes que o ${j1} inseriu são: ${numDiferentes}`)
+
+

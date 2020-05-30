@@ -6,5 +6,8 @@ const axios = require('axios')
 
 
 axios.get('https://breaking-bad-quotes.herokuapp.com/v1/quotes')
-.then((result) => console.log(result.data))
-.catch((error) => console.log(error))
+    .then((result) => {
+        const { author, quote } = result.data[0]
+        console.log(`Autor: ${author}, Frase ${quote}`)
+    })
+    .catch((error) => console.log(error))

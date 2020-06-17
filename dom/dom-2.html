@@ -1,0 +1,41 @@
+<!-- (OBRIGATÓRIO) Escreva um programa que recebe como entrada 
+    uma frase (Ex.: “O rato roeu a roupa do rei de roma”) 
+    numa caixa de texto e exibe o resultado numa lista HTML, 
+    com as palavras separadas item a item. Exemplo:
+O
+Rato
+Roeu
+A
+Roupa
+Do
+Rei
+De
+Roma
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio DOM 2</title>
+</head>
+<body>
+    <h1>Escreva uma frase abaixo:</h1>
+    <input type="text" id="texto">
+    <button onclick="quebraTexto()">Gerar lista</button>
+
+
+    <script>
+
+        function quebraTexto(){
+            let textoQuebrado = []
+            let pegaInput = document.getElementById('texto').value
+            pegaInput.split(',')
+            textoQuebrado.push(pegaInput)
+            console.log(textoQuebrado)
+        }
+
+    </script>
+</body>
+</html>

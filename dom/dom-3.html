@@ -1,0 +1,26 @@
+<!-- 
+(OBRIGATÓRIO) Abra uma caixa de texto pedindo para o usuário
+inserir a sua idade e, caso essa idade seja menor que 18 anos,
+esse usuário seja redirecionado para a página do Mundo Bita (www.mundobita.com.br). 
+Caso sua idade seja maior que 18 anos, redirecioná-lo para www.pudim.com.br
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio DOM 3</title>
+</head>
+<body>
+    <script>
+        let pegaIdade = prompt('Digite a sua idade: ')
+        if(pegaIdade < 18){
+            window.location.href='http://www.mundobita.com.br/'
+        } else {
+            window.location.href='http://www.pudim.com.br/'
+        }
+    </script>
+</body>
+</html>

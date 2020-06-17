@@ -1,0 +1,24 @@
+<!-- (OBRIGATÓRIO) Crie  uma  página  HTML  com  um  cabeçalho  h1  e  um  botão.  
+    Ao  clicar  no  botão,  altere  o  texto  do cabeçalho para “A mágica continua!”. -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio DOM 1</title>
+    </head>
+    <body>
+        <h1 id="cabecalho">Cabeçalho</h1>
+        <button onclick="magica()">Mágica</button>
+
+        <script>
+
+            function magica(){
+                let cabecalho = document.getElementById('cabecalho')
+                cabecalho.innerHTML = 'A mágica continua !'
+            }
+
+        </script>
+    </body>
+    </html>
